@@ -7,7 +7,7 @@ try
     int a = Convert.ToInt32 (Console.ReadLine());
     Console.WriteLine("Введите второе целое число ");
     int b = Convert.ToInt32 (Console.ReadLine());
-    Console.WriteLine("Введите третие целое число ");
+    Console.WriteLine("Введите третье целое число ");
     int c = Convert.ToInt32 (Console.ReadLine());
     if (a>b)
         {
@@ -15,7 +15,7 @@ try
                 {
                     Console.WriteLine("Первое число максимальное");
                 }
-            else Console.WriteLine("третие число максимальное");
+            else Console.WriteLine("третье число максимальное");
         }
     else if (b>c)
         {         
@@ -28,7 +28,7 @@ try
                     Console.WriteLine("Числа равны");
                 }
         }
-    else Console.WriteLine("третие число максимальное");
+    else Console.WriteLine("третье число максимальное");
 }
 catch
 {
