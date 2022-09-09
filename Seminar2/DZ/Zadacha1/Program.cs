@@ -11,7 +11,7 @@ try
                     numb = (numb/10)%10;
                     Console.WriteLine("Это вторая цифра числа "+numb);
                 }
-             else Console.WriteLine("Надо было ввести трёхзначное число");
+            else Console.WriteLine("Надо было ввести трёхзначное число");
         }
     Console.Write("Введите трёхзначное число: ");
     int numb = Convert.ToInt32 (Console.ReadLine());
