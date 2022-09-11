@@ -4,7 +4,7 @@
 
 double Rasst(int xA, int yA, int xB, int yB) // ввод ф-ции, определяющей координаты точки
     {
-        double res; // ввод имени ф-ции для вывода результата (номер четверти плоскости)
+        double res; // ввод имени ф-ции для вывода результата 
         int a = xA - xB;
         int b = yA - yB;
         res = Math.Sqrt(a*a + b*b);
