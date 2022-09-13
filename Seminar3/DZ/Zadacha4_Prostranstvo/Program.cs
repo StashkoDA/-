@@ -15,3 +15,4 @@ double Rasst(int[] num1, int[] num2) // ввод ф-ции, определяющ
                     res = Math.Sqrt(a*a + b*b + c*c);
                 }
             }
+    }
