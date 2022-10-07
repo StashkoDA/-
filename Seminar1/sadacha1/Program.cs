@@ -9,3 +9,14 @@ if (x>0)
 }
 else if (x<0) Console.WriteLine("Число отрицательное");
 else Console.WriteLine("Вы ввели ноль");
+
+// или без описаний
+/*
+Console.WriteLine("Start");
+
+int x = 7;
+int result = x * x;
+Console.WriteLine(result);
+
+Console.WriteLine("END");
+*/
