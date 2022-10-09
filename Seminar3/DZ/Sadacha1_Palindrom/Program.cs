@@ -30,7 +30,7 @@ catch
 */
 
 //// или
-
+/*
 string Poli(string numb)
 {
     string res;
@@ -45,3 +45,17 @@ Console.Write ("Введите пятизначное число: ");
 string numb = Console.ReadLine()!;
 string rez = Poli(numb);
 Console.WriteLine(rez);
+*/
+
+///// или
+
+int N = 456541;
+int value = N;
+int result = 0;
+while (value != 0)
+{
+    int U = value % 10;
+    result = result * 10 + U;
+    value = value /10;
+}
+Console.WriteLine(result == N);
