@@ -46,7 +46,7 @@ void Print(double ax, double ay, double bx, double by, double result) // ф-ци
     string output = "|A(" + ax + ", " + ay + "); B(" +
                             bx + ", " + by + ")| = " +
                     // result;
-                    Math.Round(result, 2);
+                    Math.Round(result, 2); // вывод результата с двумя знаками после запятой
 Console.WriteLine(output);
 }
 
