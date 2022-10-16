@@ -10,7 +10,7 @@ void FillArray(int[] collection) //ф-ция ввода данных масси�
     int index = 0;
     while (index < length)
     {
-        collection[index] = new Random().Next(1, 100); // заполняем массив случайными числами от 1 до 10
+        collection[index] = new Random().Next(1, 100); // заполняем массив случайными числами от 1 до 100
         index++;
     }
 }
@@ -25,11 +25,11 @@ void PrintArray(int[] col) //печать массива.
         Console.Write(col[position] + ", ");
         position++;
     }
-    Console.Write(col[8]);
+    Console.Write(col[7]);
     Console.Write("]");
 }
 
-int[] array = new int[9]; //задание массива из 10 эл-тов.
+int[] array = new int[8]; //задание массива из 8 эл-тов.
 FillArray(array);
 PrintArray(array);
 Console.WriteLine();
@@ -47,11 +47,11 @@ void PrintArray(int[] col) //печать массива.
         Console.Write(col[position] + ", ");
         position++;
     }
-    Console.Write(col[8]);
+    Console.Write(col[7]);
     Console.Write("]");
 }
 
-int[] array = new int[9] {1, 3, 6, 8, 9, 2, 44, 77, 46}; //задание массива из 10 эл-тов.
+int[] array = new int[] {1, 3, 6, 8, 9, 2, 44, 77}; //задание массива из 8 эл-тов.
 //FillArray(array);
 PrintArray(array);
 Console.WriteLine();
@@ -82,13 +82,13 @@ void PrintArray(int[] col) //печать массива.
         Console.Write(col[position] + ", ");
         position++;
     }
-    Console.Write(col[8]);
+    Console.Write(col[7]);
     Console.Write("]");
 }
 
 try
     {
-        int[] array = new int[9]; //задание массива из 9 эл-тов.
+        int[] array = new int[8]; //задание массива из 8 эл-тов.
 
         FillArray(array);
         PrintArray(array);
