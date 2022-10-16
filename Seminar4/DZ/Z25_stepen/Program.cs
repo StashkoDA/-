@@ -2,7 +2,7 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-double GetNumber(string text) // функция запроса ввода координат
+double GetNumber(string text) // функция запроса ввода чисел
 {
     Console.Write(text + ": ");
     double number = Convert.ToDouble(Console.ReadLine());
