@@ -27,3 +27,20 @@ catch
 {
     System.Console.WriteLine("Вводите целочисленное значение");
 }
+
+/* или
+
+string GetSquare(int n)
+{
+    int i = 1;
+    string res = String.Empty;
+    while (i <= n)
+    {
+        res += $"{Convert.ToString(i * i)}, ";
+        i++;
+    }
+    return res;
+}
+int = 5;
+System.Console.WriteLine(GetSquare(5))
+*/
