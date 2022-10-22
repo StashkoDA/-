@@ -4,9 +4,7 @@
 [345, 897, 568, 234] -> 2
 */
 
-// Решение с созданием произвольного массива
-
-void FillArray(int[] collection) //ф-ция ввода данных массива без вывода значений.
+void FillArray(int[] collection) //заполнение массива случайными числами.
 {
     int length = collection.Length;
     for (int index = 0; index < length; index++)
@@ -15,7 +13,7 @@ void FillArray(int[] collection) //ф-ция ввода данных масси�
     }
 }
 
-int GetEvenArray (int[] col)
+int GetEvenArray (int[] col) // количество чётных
 {
     int sum = 0;
     for (int pos = 0; pos < col.Length; pos++)

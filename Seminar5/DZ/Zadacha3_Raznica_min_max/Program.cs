@@ -4,7 +4,7 @@
 [3 7 22 2 78] -> 76
 */
 
-void FillArray(double[] collection) //ф-ция ввода данных массива без вывода значений.
+void FillArray(double[] collection) //заполнение массива случайными числами.
 {
     int length = collection.Length;
     for (int index = 0; index < length; index++)
@@ -27,17 +27,12 @@ double GetDiffnArray (double[] col) // поиск разницы между ма
 
 void PrintArray(double[] col, double diff) //печать массива.
 {
-    int count = col.Length;
-    int position = 0;
-    double even = diff;
     Console.Write("[");
-    while (position < count-1)
+    for (int position = 0; position < col.Length - 1; position++)
     {
         Console.Write(col[position] + ", ");
-        position++;
     }
-    Console.Write(col[3]);
-    Console.Write("] -> " + even);
+    Console.Write(col[3] + "] -> " + diff);
 }
 
 double[] array = new double[4]; //задание массива из 4 эл-тов.

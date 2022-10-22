@@ -26,17 +26,12 @@ int GetNotEvenArray (int[] col) // сумма нечетных значений
 
 void PrintArray(int[] col, int sum) //печать массива и суммы.
 {
-    int count = col.Length;
-    int position = 0;
-    int noteven = sum;
     Console.Write("[");
-    while (position < count-1)
+    for (int position = 0; position < col.Length - 1; position++)
     {
         Console.Write(col[position] + ", ");
-        position++;
     }
-    Console.Write(col[3]);
-    Console.Write("] -> " + sum);
+    Console.Write(col[3] + "] -> " + sum);
 }
 
 int[] array = new int[4]; //задание массива из 4 эл-тов.
