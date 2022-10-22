@@ -11,7 +11,7 @@ void FillArray(int[] collection) //ф-ция ввода данных масси�
     int length = collection.Length;
     for (int index = 0; index < length; index++)
     {
-        collection[index] = new Random().Next(100, 999);
+        collection[index] = new Random().Next(100, 1000);
     }
 }
 
