@@ -15,12 +15,12 @@ void FillArray(double[] collection) //ф-ция ввода данных масс
 
 double GetDiffnArray (double[] col) // поиск разницы между макс и мин
 {
-   double min = col(0);
-   double max = col(0);
+   double min = col[0];
+   double max = col[0];
    for (int pos = 1; pos < col.Length; pos++)
     {
-        if (col(pos) > max) max = col(pos);
-        if (col(pos) < min) min = col(pos);
+        if (col[pos] > max) max = col[pos];
+        if (col[pos] < min) min = col[pos];
     }
     return max - min;
 }
@@ -41,7 +41,7 @@ void PrintArray(double[] col, double diff) //печать массива.
 }
 
 double[] array = new double[4]; //задание массива из 4 эл-тов.
-double diff = GetDiffnArray (array);
 FillArray(array);
+double diff = GetDiffnArray (array);
 PrintArray(array, diff);
 Console.WriteLine();
