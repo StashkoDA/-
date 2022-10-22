@@ -20,31 +20,23 @@ int GetEvenArray (int[] col)
     int sum = 0;
     for (int pos = 0; pos < col.Length; pos++)
     {
-        while (col[pos] % 2 == 0)
-        {
-            sum +=1;
-        }
+        if (col[pos] % 2 == 0) sum +=1;
     }
     return sum;
 }
 
 void PrintArray(int[] col, int sum) //печать массива.
 {
-    int count = col.Length;
-    int position = 0;
-    int even = sum;
     Console.Write("[");
-    while (position < count-1)
+    for (int position = 0; position < col.Length - 1; position++)
     {
         Console.Write(col[position] + ", ");
-        position++;
     }
-    Console.Write(col[3]);
-    Console.Write("] -> " + sum);
+    Console.Write(col[3] + "] -> " + sum);
 }
 
 int[] array = new int[4]; //задание массива из 4 эл-тов.
-int sum = GetEvenArray (array);
 FillArray(array);
+int sum = GetEvenArray (array);
 PrintArray(array, sum);
 Console.WriteLine();
