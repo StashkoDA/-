@@ -7,8 +7,6 @@
 
 void FillArray(int[] col) //ф-ция ввода данных массива без вывода значений.
 {
-    //Console.Write("Введите количество элементов массива: ");
-    //M = Convert.ToInt32(Console.ReadLine());
     int length = col.Length;
     int index = 0;
     while (index < length)
@@ -42,7 +40,7 @@ void PrintArray (int[] col, int sum, int M) //печать массива.
 int M;
 Console.Write("Введите количество элементов массива: ");
 M = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[M]; //задание массива из 4 эл-тов.
+int[] array = new int[M]; //задание массива из M эл-тов.
 FillArray(array);
 int sum = GetPositiveArray (array);
 PrintArray(array, sum, M);
