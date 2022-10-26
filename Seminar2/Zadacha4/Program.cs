@@ -17,7 +17,7 @@ else Console.WriteLine($"Число не кратно 7 и 23");
 }
 
 Console.Write("Введите целое число: ");
-int num = int.Parse(Console.ReadLine()); // - здесь равноценно вводу Convert.ToInt32 (Console.ReadLine());
+int num = int.Parse(Console.ReadLine()!); // - здесь равноценно вводу Convert.ToInt32 (Console.ReadLine());
 
 numbers(num);
 Console.WriteLine();

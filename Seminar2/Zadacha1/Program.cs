@@ -7,7 +7,7 @@ void CamperoDigits() //CamperoDigits - это произвольное имя ф
     int x2 = x%10; //определяем вторую цифру числа
     Console.WriteLine($"Сгенерировано случайное число {x} ");
     if (x1>x2) Console.WriteLine("Первая цифра больше");
-    else if (x1>x2) Console.WriteLine("Вторая цифра больше");
+    else if (x1<x2) Console.WriteLine("Вторая цифра больше");
     else Console.WriteLine("Эти цифры равны"); //или "Это полиндром"
     }
 

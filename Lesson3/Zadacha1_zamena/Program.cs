@@ -11,7 +11,7 @@ string text = "- Я думаю, - сказал князь, улыбаясь, - �
 //             012345
 // S[3] это символ "r"
 
-string Replace(string text, char oldValue, char newValue)
+string Replace(string text, char oldValue, char newValue) // string - строка, текст. char - символ.
 {
     string result = String.Empty;
 

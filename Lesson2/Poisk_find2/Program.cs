@@ -6,7 +6,7 @@ void FillArray(int[] collection) //ф-ция ввода данных масси�
     int index = 0;
     while (index < length)
     {
-        collection[index] = new Random().Next(1, 10);
+        collection[index] = new Random().Next(1, 10); // заполняем массив случайными числами от 1 до 10
         index++;
     }
 }
@@ -40,11 +40,11 @@ int IndexOf(int[] collektion, int find) //возвращение индекса 
 }
 int[] array = new int[10]; //задание массива из 10 эл-тов.
 
-FillArray(array);
+FillArray(array); // вызываем функцию для заполнения массива
 array[4] = 4;
 array[6] = 4;
-PrintArray(array);
+PrintArray(array); // вызываем функцию для вывода на экран полученного массива
 Console.WriteLine();
 
-int pos = IndexOf(array, 4);
-Console.WriteLine(pos);
+int pos = IndexOf(array, 4); // поиск индексов элементов массива, элементы к-рых равны 4
+Console.WriteLine(pos); // вывод искомого индекса элемента=4

@@ -36,7 +36,7 @@ Console.WriteLine();
 
 
 // Задача 2.2 - Отсортировать массив 6 8 3 2 1 4 5 7 1 1 от максимального до минимального значения
-
+/*
 int [] arr1 = {6, 8, 3, 2, 1, 4, 5, 7, 1, 1};
 
 void PrintArray1(int[] array1) // вывод массива на экран
@@ -69,3 +69,4 @@ PrintArray1(arr1);
 Console.Write("Сортировка от макс к мин значению: ");
 SelectionSort1(arr1);
 PrintArray1(arr1);
+*/
