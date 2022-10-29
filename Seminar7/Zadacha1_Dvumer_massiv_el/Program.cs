@@ -17,6 +17,34 @@ void FillArray(int[,] tabl)
     }
 }
 
+int GetIndex(string text) // функция запроса ввода индекса
+{
+    Console.Write(text + ": ");
+    int value = Convert.ToInt32(Console.ReadLine());
+    return value;
+}
+
+int GetNumb(int[,] tabl, int numb) // поиск элемента в массиве
+{
+    if (numb >= 0 && numb < 16)
+    {
+        for (int i = 0; i < tabl.GetLength(0); i++)
+            {
+                for (int j = 0; j < tabl.GetLength(1); j++)
+                {
+                    int sum = 0;
+                    if(sum == numb)
+                    {
+                        return tabl[i, j];
+                        //break;
+                    }
+                    else sum++;
+                }
+            }
+    }
+    else return -1;
+}
+
 void PrintArray(int[,] tabl) // печать полученного массива
 {
     for (int i = 0; i < tabl.GetLength(0); i++)
@@ -28,14 +56,27 @@ void PrintArray(int[,] tabl) // печать полученного массив
     Console.WriteLine();
     }
     Console.WriteLine();
-
-    int sum = tabl.GetLength(0) * tabl.GetLength(1);
-    Console.Write($"{sum}");
+}
+void PrintNumb(int numb, int el)
+{
+    Console.Write(numb + " -> " + el);
     Console.WriteLine();
-    
 }
 
+
+    /*if (value >= 0 && value < 17)
+        {
+            q = value;
+            Console.Write(q + " -> " + tabl[i, j]);
+        }
+    else Console.Write("Такой позиции в масиве нет. Введите число от 0 до 15");
+    */
+
+
+int numb = GetIndex("Введите позицию элемента от 0 до 15"); // запрос ввода индекса
 int[,] tablic = new int[4, 4];
-Console.WriteLine(); // введено для создания пустой строки между матрицами
 FillArray(tablic);
+int el = GetNumb(tablic, numb);
 PrintArray(tablic);
+PrintNumb(numb, el);
+
