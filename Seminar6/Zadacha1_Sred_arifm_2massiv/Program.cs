@@ -19,7 +19,7 @@ void PrintArray(int[,] tabl) // печать полученного массив
         {
             Console.Write($"{tabl[i, j]} ");
         }
-    Console.WriteLine();
+        Console.WriteLine();
     }
     Console.WriteLine();
 }
@@ -51,7 +51,7 @@ void PrintRez(int[,] tabl)
             result[i] += tabl[j, i]; // определяем сумму эл-тов в столбце
         }
         result[i] /= tabl.GetLength(0);
-        Console.Write($"{result[i]}, ");
+        Console.Write($"{result[i]} | ");
     }
     Console.WriteLine();
 }
