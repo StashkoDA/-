@@ -24,21 +24,26 @@ int GetIndex(string text) // функция запроса ввода индек
     return value;
 }
 
-void GetNumb(int[,] tabl, int numb) // поиск элемента в массиве
+int[] GetNumb(int[,] tabl) // создаём одномерный массив из эл-тов 2мерного массива tabl
 {
     int[] result = new int[tabl.GetLength(0) * tabl.GetLength(1)]; // создаём одномерный массив из эл-тов 2мерного массива tabl 
-    // длина массива равна кол-ву эл-тов 2мерного массива tabl
-    for (int i = 0; i < result.Length; i++)
+                                                                   // длина массива равна кол-ву эл-тов 2мерного массива tabl
+    int i = 0;
+    for (int j = 0; j < tabl.GetLength(0); j++) // перебираем строки
     {
-        for (int j = 0; j < tabl.GetLength(0); j++) // перебираем строки
+        for (int q = 0; q < tabl.GetLength(1); q++)
         {
-            for (int q = 0; q < tabl.GetLength(1); q++)
+            if(i < result.Length)
             {
-                result[i] = tabl[j, q]; // получаем новый массив
+                result[i] = tabl[j, q];
             }
-        }
+            i++;
+        }           
     }
+    return result;
 }
+
+
 
 void PrintArray(int[,] tabl) // печать полученного массива
 {
@@ -48,38 +53,28 @@ void PrintArray(int[,] tabl) // печать полученного массив
         {
             Console.Write($"{tabl[i, j]} ");
         }
-    Console.WriteLine();
+        Console.WriteLine();
     }
     Console.WriteLine();
 }
-void PrintNumb(int[,] tabl, int numb) // печать искомого эл-та
+void PrintNumb(int[] result, int numb) // печать искомого эл-та
 {
-    int[] result = new int[tabl.GetLength(0) * tabl.GetLength(1)]; // создаём одномерный массив из эл-тов 2мерного массива tabl 
-    // длина массива равна кол-ву эл-тов 2мерного массива tabl
-    for (int i = 0; i < result.Length; i++)
+    if(numb >= 0 && numb < 16)
     {
-        for (int j = 0; j < tabl.GetLength(0); j++) // перебираем строки
+        for(int i = 0; i < result.Length; i++)
         {
-            for (int q = 0; q < tabl.GetLength(1); q++)
-            {
-                if(i == numb)
-                {
-                    result[i] = tabl[j, q]; // получаем новый массив
-                    Console.WriteLine(" -> " + result[numb]);
-                }
-                else Console.WriteLine(numb + " -> Такой позиции в масиве нет. Введите число от 0 до 15");
-            }
+            if(i == numb) Console.WriteLine(numb + " -> " + result[i]);
         }
     }
-        
-    Console.WriteLine();
+    else Console.WriteLine(numb + " -> Такой позиции в масcиве нет. Введите число от 0 до 15");
 }
 
-int numb = GetIndex("Введите позицию элемента от 0 до 15"); // запрос ввода индекса
+Console.WriteLine(); 
+
+
 int[,] tablic = new int[4, 4];
 FillArray(tablic);
-GetNumb(tablic, numb);
 PrintArray(tablic);
-PrintNumb(tablic, numb);
-
-
+int numb = GetIndex("Введите позицию элемента от 0 до 15"); // запрос ввода индекса
+int[] trans = GetNumb(tablic);
+PrintNumb(trans, numb);
