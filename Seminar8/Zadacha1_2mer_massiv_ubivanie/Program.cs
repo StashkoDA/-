@@ -45,15 +45,12 @@ void GetOrderedArray(int[,] free) // получение упорядоченно
             {
                 if (free[i, k] < free[i, minPosition]) minPosition = k;
             }
-
-
             int box = free[i, j];           // производим замену элементов далее
             free[i, j] = free[i, minPosition];
             free[i, minPosition] = box;
         }
         
-    }
-    
+    }  
 }
 
 Console.WriteLine("Задан произвольный массив:");
