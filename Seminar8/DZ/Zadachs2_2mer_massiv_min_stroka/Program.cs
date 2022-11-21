@@ -67,6 +67,5 @@ Console.WriteLine("Задан произвольный массив:");
 int[,] arbitraryArray = new int[3, 3];
 FillArray(arbitraryArray);
 PrintArray(arbitraryArray);
-//int[] sum = new int[4];
 int[] resultSum = GetMinString(arbitraryArray);
 PrintMinString(resultSum);
