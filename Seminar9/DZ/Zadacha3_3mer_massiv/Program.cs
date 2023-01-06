@@ -10,13 +10,15 @@
 
 void FillArray(int[,,] array)
 {
+    int n = 11;
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             for (int k = 0; k < 2; k++)
-            {
-                array[j, k, i] = new Random().Next(10, 100);
+            {                
+                array[j, k, i] = new Random().Next(-2 + n, 10 + n);
+                n = n + 11;
             }
         }
     }
